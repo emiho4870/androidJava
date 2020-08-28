@@ -1,0 +1,18 @@
+package 연산자;
+
+public class 산술연산자 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 산술연산자
+		int x = 200; // 순서대로 처리
+		int y = 100;
+		System.out.println("더한 값은" + (x + y)); //String 결합시 String으로인식
+		System.out.println("뺀 값은" + (x - y));
+		System.out.println("곱한 값은" + (x * y));
+		System.out.println("나눈 값은" + (x / y));
+		System.out.println("나머지 값은" + (x % y));
+		
+	}
+
+}

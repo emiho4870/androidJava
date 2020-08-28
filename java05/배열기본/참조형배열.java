@@ -1,0 +1,14 @@
+package 배열기본;
+
+public class 참조형배열 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] names = new String[2]; // String배열 2개 // 주소 : 값 : length
+		names[0] = "홍길동";
+		names[1] = "김길동";
+		System.out.println("개수: " + names.length);
+
+	}
+
+}
