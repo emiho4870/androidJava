@@ -1,183 +1,235 @@
+
 package project;
-
-
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.swing.JOptionPane;
 
 public class MemberDAO {
-	
-	/*
-	 * íšŒì›ê°€ì… : create
-	 */
+
 	public void create(MemberVO vo) throws Exception {
-		
+
 		Class.forName("com.mysql.jdbc.Driver");
-		
-		String url = "jdbc:mysql://localhost:3366/shop1";
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
+
+		// 2. db¿¬°á
+//		String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
+		String url = "jdbc:mysql://localhost:3366/furniture_shop";
 		String user = "root";
 		String password = "1234";
 		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
 
-
-		String sql = "insert into shop_member values (?,?,?,?,?)";
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
+		String sql = "insert into shop_member values (?,?,?,?,?,?)";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, vo.getMember_id());
 		ps.setString(2, vo.getMember_pw());
-		ps.setString(3, vo.getMember_name());
-		ps.setString(4, vo.getMember_tel_no());
-		ps.setString(5, vo.getMember_address());
-		
-		System.out.println("íšŒì›ê°€ì… ìš”ì²­");
+		ps.setString(3, vo.getMember_pwChk());
+		ps.setString(4, vo.getMember_name());
+		ps.setString(5, vo.getMember_tel_no());
+		ps.setString(6, vo.getMember_address());
+		System.out.println("3. SQL»ı¼º ¼º°ø.!!");
 
+		// 4. sql¹®Àº Àü¼Û
 		ps.executeUpdate();
-		System.out.println("íšŒì›ê°€ì… ì™„ë£Œ");
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
 
 	}
 
-	
-	/*
-	 * IDì¤‘ë³µì²´í¬
-	 */
-	public int read(String member_id) throws Exception {
-		
-		/*
-		 * idë¥¼ ì½ì–´ì„œ result 0 / 1 ì— ë”°ë¼ intí˜•ìœ¼ë¡œ ê²°ê³¼ë°˜í™˜
-		 */
-		
-		
+	public int read2(String member_id) throws Exception {
+//		 DBÇÁ·Î±×·¥ ÀıÂ÷¿¡ ¸ÂÃß¾î¼­ ÄÚµù
+//		 1. connector¼³Á¤
 		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
 
-		
-		String url = "jdbc:mysql://localhost:3366/shop1";
+		// 2. db¿¬°á
+//				String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
+		String url = "jdbc:mysql://localhost:3366/furniture_shop";
 		String user = "root";
 		String password = "1234";
 		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
 
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
 		String sql = "select * from shop_member where member_id = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, member_id);
-		/*
-		 * VOì—°ê²°ì•„ë‹˜
-		 */
+		System.out.println("3. SQL¹® »ı¼º ¼º°ø.!!");
 
-		// 4. sqlë¬¸ì€ ì „ì†¡
-		// selectì˜ ê²°ê³¼ëŠ” ê²€ìƒ‰ê²°ê³¼ê°€ ë‹´ê¸´ í…Œì´ë¸”(í•­ëª©+ë‚´ìš©)
-		// ë‚´ìš©ì—ëŠ” ì—†ì„ ìˆ˜ë„ ìˆê³ , ë§ì€ ìˆ˜ë„ ìˆìŒ.
+		// 4. sql¹®Àº Àü¼Û
+		// selectÀÇ °á°ú´Â °Ë»ö°á°ú°¡ ´ã±ä Å×ÀÌºí(Ç×¸ñ+³»¿ë)
+		// ³»¿ë¿¡´Â ¾øÀ» ¼öµµ ÀÖ°í, ¸¹Àº ¼öµµ ÀÖÀ½.
+		ps.executeQuery();
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
+
 		ResultSet rs = ps.executeQuery();
-		System.out.println("4. SQLë¬¸ ì „ì†¡ ì„±ê³µ.!!");
-		int result = 0;// ì—†ìŒ.
-		if (rs.next() == true) { // ê²°ê³¼ê°€ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ ì²´í¬í•´ì£¼ëŠ” ë©”ì„œë“œ
-			// if(rs.next())ì™€ ë™ì¼í•¨.
-			// ifë¬¸ì€ rs.next()ê°€ trueë•Œë§Œ ì‹¤í–‰ë˜ë¯€ë¡œ!
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ê°€ ìˆì–´ìš”.");
-			result = 1; // ìˆìŒ.
-//			rs.getInt("no");//ì •ìˆ˜ ê°€ì§€ê³  ì˜¬ë•Œ
-//			rs.getDouble("num");//ì‹¤ìˆ˜ ê°€ì§€ê³  ì˜¬ë•Œ
-			String id2 = rs.getString("id");
-			String pw = rs.getString("pw");
-			String name = rs.getString("name");
-			String tel = rs.getString("tel");
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ id: " + id2);
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ pw: " + pw);
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ name: " + name);
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ tel: " + tel);
+		int result = 0;// ¾øÀ½.
+		if (rs.next() == true) { // °á°ú°¡ ÀÖ´ÂÁö ¾ø´ÂÁö Ã¼Å©ÇØÁÖ´Â ¸Ş¼­µå
+			// if(rs.next())¿Í µ¿ÀÏÇÔ.
+			// if¹®Àº rs.next()°¡ true¶§¸¸ ½ÇÇàµÇ¹Ç·Î!
+			System.out.println("°Ë»ö°á°ú°¡ ÀÖ¾î¿ä.");
+			result = 1; // ÀÖÀ½.
+			String member_id2 = rs.getString("member_id");
+			String member_pw = rs.getString("member_pw");
+			System.out.println("°Ë»ö°á°ú id: " + member_id2);
+			System.out.println("°Ë»ö°á°ú pw: " + member_pw);
 		} else {
-			System.out.println("ê²€ìƒ‰ê²°ê³¼ê°€ ì—†ì–´ìš”.");
+			System.out.println("°Ë»ö°á°ú°¡ ¾ø¾î¿ä.");
 		}
 		return result;
-		// 0ì´ ë„˜ì–´ê°€ë©´, ê²€ìƒ‰ê²°ê³¼ ì—†ìŒ.
-		// 1ì´ ë„˜ì–´ê°€ë©´, ê²€ìƒ‰ê²°ê³¼ ìˆìŒ.
+		// 0ÀÌ ³Ñ¾î°¡¸é, °Ë»ö°á°ú ¾øÀ½.
+		// 1ÀÌ ³Ñ¾î°¡¸é, °Ë»ö°á°ú ÀÖÀ½.
 	}
 
-	/*
-	 *  id, pwë§ëŠ”ì§€ ë¡œê·¸ì¸ ì²˜ë¦¬
-	 */
-	public boolean read(String member_id, String member_pw) throws Exception {
-//		 DBí”„ë¡œê·¸ë¨ ì ˆì°¨ì— ë§ì¶”ì–´ì„œ ì½”ë”©
-//		 1. connectorì„¤ì •
+	public void update(String tel, String id) throws Exception {
+		// DBÇÁ·Î±×·¥ ÀıÂ÷¿¡ ¸ÂÃß¾î¼­ ÄÚµù
+		// 1. connector¼³Á¤
 		Class.forName("com.mysql.jdbc.Driver");
-		System.out.println("1. connectorì—°ê²° ì„±ê³µ.!!");
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
 
-		// 2. dbì—°ê²°
-//				String url = "ì—°ê²°í•˜ëŠ”ë°©ë²•://ip:port/dbëª…";
+		// 2. db¿¬°á
+//				String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
 		String url = "jdbc:mysql://localhost:3366/shop1";
 		String user = "root";
 		String password = "1234";
 		Connection con = DriverManager.getConnection(url, user, password);
-		System.out.println("2. dbì—°ê²° ì„±ê³µ.!!");
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
 
-		// 3. sqlë¬¸ì„ ë§Œë“ ë‹¤.(create)
-		String sql = "select * from member where id = ? and pw = ?";
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
+		String sql = "update member set tel = ? where id = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, tel);
+		ps.setString(2, id);
+		System.out.println("3. SQL»ı¼º ¼º°ø.!!");
+
+		// 4. sql¹®Àº Àü¼Û
+		ps.executeUpdate();
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
+	}
+
+	public void delete(String id) throws Exception {
+//		DBÇÁ·Î±×·¥ ÀıÂ÷¿¡ ¸ÂÃß¾î¼­ ÄÚµù
+//				1. connector¼³Á¤
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
+
+		// 2. db¿¬°á
+//			   String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
+		String url = "jdbc:mysql://localhost:3366/shop1";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
+
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
+		String sql = "delete from member where id = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, id);
+		System.out.println("3. SQL»ı¼º ¼º°ø.!!");
+
+		// 4. sql¹®Àº Àü¼Û
+		ps.executeUpdate();
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
+	}
+
+	/*
+	 * ¾ÆÀÌµğÁßº¹Ã¼Å© ·Î±×ÀÎ¼³Á¤
+	 */
+
+	/*
+	 * idÁßº¹Ã¼Å©
+	 */
+	public int read(String member_id) throws Exception {
+//			 DBÇÁ·Î±×·¥ ÀıÂ÷¿¡ ¸ÂÃß¾î¼­ ÄÚµù
+//			 1. connector¼³Á¤
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
+
+		// 2. db¿¬°á
+//					String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
+		String url = "jdbc:mysql://localhost:3366/furniture_shop";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
+
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
+		String sql = "select * from shop_member where member_id = ?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, member_id);
+
+		// 4. sql¹®Àº Àü¼Û
+		// selectÀÇ °á°ú´Â °Ë»ö°á°ú°¡ ´ã±ä Å×ÀÌºí(Ç×¸ñ+³»¿ë)
+		// ³»¿ë¿¡´Â ¾øÀ» ¼öµµ ÀÖ°í, ¸¹Àº ¼öµµ ÀÖÀ½.
+		ResultSet rs = ps.executeQuery();
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
+		int result = 0;// ¾øÀ½.
+		if (rs.next() == true) { // °á°ú°¡ ÀÖ´ÂÁö ¾ø´ÂÁö Ã¼Å©ÇØÁÖ´Â ¸Ş¼­µå
+			// if(rs.next())¿Í µ¿ÀÏÇÔ.
+			// if¹®Àº rs.next()°¡ true¶§¸¸ ½ÇÇàµÇ¹Ç·Î!
+			System.out.println("°Ë»ö°á°ú°¡ ÀÖ¾î¿ä.");
+			result = 1; // ÀÖÀ½.
+//				rs.getInt("no");//Á¤¼ö °¡Áö°í ¿Ã¶§
+//				rs.getDouble("num");//½Ç¼ö °¡Áö°í ¿Ã¶§
+			String member_id2 = rs.getString("member_id");
+			String member_pw = rs.getString("member_pw");
+			System.out.println("°Ë»ö°á°ú id: " + member_id2);
+			System.out.println("°Ë»ö°á°ú pw: " + member_pw);
+		} else {
+			System.out.println("°Ë»ö°á°ú°¡ ¾ø¾î¿ä.");
+		}
+		return result;
+		// 0ÀÌ ³Ñ¾î°¡¸é, °Ë»ö°á°ú ¾øÀ½.
+		// 1ÀÌ ³Ñ¾î°¡¸é, °Ë»ö°á°ú ÀÖÀ½.
+	}
+
+	/*
+	 * id, pw ·Î±×ÀÎ Ã³¸® : boolean : MEMBER : true : false
+	 */
+
+	public boolean read(String member_id, String member_pw) throws Exception {
+//			 DBÇÁ·Î±×·¥ ÀıÂ÷¿¡ ¸ÂÃß¾î¼­ ÄÚµù
+//			 1. connector¼³Á¤
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("1. connector¿¬°á ¼º°ø.!!");
+
+		// 2. db¿¬°á
+//					String url = "¿¬°áÇÏ´Â¹æ¹ı://ip:port/db¸í";
+		String url = "jdbc:mysql://localhost:3366/furniture_shop";
+		String user = "root";
+		String password = "1234";
+		Connection con = DriverManager.getConnection(url, user, password);
+		System.out.println("2. db¿¬°á ¼º°ø.!!");
+
+		// 3. sql¹®À» ¸¸µç´Ù.(create)
+		String sql = "select * from shop_member where member_id = ? and member_pw = ?";
 		PreparedStatement ps = con.prepareStatement(sql);
 		ps.setString(1, member_id);
 		ps.setString(2, member_pw);
 
-		// 4. sqlë¬¸ì€ ì „ì†¡
-		// selectì˜ ê²°ê³¼ëŠ” ê²€ìƒ‰ê²°ê³¼ê°€ ë‹´ê¸´ í…Œì´ë¸”(í•­ëª©+ë‚´ìš©)
-		// ë‚´ìš©ì—ëŠ” ì—†ì„ ìˆ˜ë„ ìˆê³ , ë§ì€ ìˆ˜ë„ ìˆìŒ.
+		// 4. sql¹®Àº Àü¼Û
+		// selectÀÇ °á°ú´Â °Ë»ö°á°ú°¡ ´ã±ä Å×ÀÌºí(Ç×¸ñ+³»¿ë)
+		// ³»¿ë¿¡´Â ¾øÀ» ¼öµµ ÀÖ°í, ¸¹Àº ¼öµµ ÀÖÀ½.
 		ResultSet rs = ps.executeQuery();
-		System.out.println("4. SQLë¬¸ ì „ì†¡ ì„±ê³µ.!!");
-		boolean result = false;// ë¡œê·¸ì¸ì´ not!ì¸ ìƒíƒœ!
-		if (rs.next() == true) { // ê²°ê³¼ê°€ ìˆëŠ”ì§€ ì—†ëŠ”ì§€ ì²´í¬í•´ì£¼ëŠ” ë©”ì„œë“œ
-			System.out.println("ë¡œê·¸ì¸ ok.");
-			result = true; // ìˆìŒ.
+		System.out.println("4. SQL¹® Àü¼Û ¼º°ø.!!");
+		boolean result = false;// ·Î±×ÀÎÀÌ not!ÀÎ »óÅÂ!
+		if (rs.next() == true) { // °á°ú°¡ ÀÖ´ÂÁö ¾ø´ÂÁö Ã¼Å©ÇØÁÖ´Â ¸Ş¼­µå
+			System.out.println("·Î±×ÀÎ ok.");
+			result = true; // ÀÖÀ½.
 		} else {
-			System.out.println("ë¡œê·¸ì¸ not.");
+			System.out.println("·Î±×ÀÎ not.");
 		}
 		return result;
-		// falseë©´ ë¡œê·¸ì¸not.
-		// trueë©´ ë¡œê·¸ì¸ok.
-	}
-	
-	/*
-	 * íšŒì›ì •ë³´ìˆ˜ì • : update
-	 */
-	public void update(MemberVO vo) throws Exception {
-	
-	
-		Class.forName("com.mysql.jdbc.Driver");
-
-		String url = "jdbc:mysql://localhost:3366/shop1";
-		String user = "root";
-		String password = "1234";
-		Connection con = DriverManager.getConnection(url, user, password);
-
-		String sql = "update shop_member set member_id = ? , member_pw = ? , member_name = ? , member_tel_no = ? , member_address = ? where member_id = ?";
-		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setString(1, vo.getMember_id());
-		ps.setString(2, vo.getMember_pw());
-		ps.setString(3, vo.getMember_name());
-		ps.setString(4, vo.getMember_tel_no());
-		ps.setString(5, vo.getMember_address());
-		System.out.println("íšŒì›ì •ë³´ ìˆ˜ì • ìš”ì²­");
-
-		ps.executeUpdate();
-		System.out.println("íšŒì›ì •ë³´ ìˆ˜ì • ì™„ë£Œ");
+		// false¸é ·Î±×ÀÎnot.
+		// true¸é ·Î±×ÀÎok.
 	}
 
 	/*
-	 * íšŒì›íƒˆí‡´
+	 * ¾ÆÀÌµğÁßº¹Ã¼Å© ·Î±×ÀÎ¼³Á¤
 	 */
-	public void delete(MemberVO vo) throws Exception {
-		
-		Class.forName("com.mysql.jdbc.Driver");
-		System.out.println("1. connectorì—°ê²° ì„±ê³µ.!!");
 
-		String url = "jdbc:mysql://localhost:3366/shop1";
-		String user = "root";
-		String password = "1234";
-		Connection con = DriverManager.getConnection(url, user, password);
-		
-		String sql = "delete from shop_member where id = ?";
-		PreparedStatement ps = con.prepareStatement(sql);
-		ps.setString(1, vo.getMember_id());
-		System.out.println("íšŒì›íƒˆí‡´ ìš”ì²­");
-
-		ps.executeUpdate();
-		System.out.println("íšŒì›íƒˆí‡´ ì„±ê³µ");
-	}
 }
