@@ -372,7 +372,7 @@ class join extends JFrame {
 				MemberDAO dao = new MemberDAO();
 
 				try {
-					if (member_pw != member_pwChk) {
+					if (member_pw.equals(member_pwChk)) {
 //								pwchkchk.setText("비밀번호입력이 같습니다");
 //								pwchkchk.setForeground(Color.red);
 						JOptionPane.showMessageDialog(null, "비밀번호입력이 같습니다");
