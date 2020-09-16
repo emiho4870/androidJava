@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 import project.MemberVO;
 
-public class MemberDAO {
+public class MemberDAO extends MemberVO {
 
 	public void create(MemberVO vo) throws Exception {
 

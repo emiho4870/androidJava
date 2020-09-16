@@ -222,15 +222,16 @@ public class 회원가입open {
 						String member_pw = t2.getText();
 						String member_pwChk = t2Chk.getText();
 						
-						MemberDAO dao = new MemberDAO();
 						
 						try {
-							if(member_pw != member_pwChk) {
+							
+							
+							if(member_pw.equals(member_pwChk)) {
 								pwchkchk.setText("비밀번호입력이 같습니다");
 								pwchkchk.setForeground(Color.red);
 							}else {
-								pwchkchk.setText("비밀번호입력이 다릅니다");
-								
+									pwchkchk.setText("비밀번호입력이 다릅니다");
+									pwchkchk.setForeground(Color.red);
 							}
 							
 						} catch (Exception e2) {
@@ -249,8 +250,8 @@ public class 회원가입open {
 				panel.add(pwchk);
 				
 				pwchkchk = new JTextField();
+				pwchkchk.setText("*비밀번호 동일여부 확인");
 				pwchkchk.setBounds(248, 236, 149, 21);
-				pwchkchk.setText("*\uBE44\uBC00\uBC88\uD638\uD655\uC778");
 				pwchkchk.setColumns(10);
 				panel.add(pwchkchk);
 				//FlowLayout flow = new FlowLayout();

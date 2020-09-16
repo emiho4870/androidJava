@@ -1,6 +1,7 @@
 package project;
 
-public class MemberVO {
+
+public class MemberVO{
 	
 	private String member_id;
 	private String member_pw;

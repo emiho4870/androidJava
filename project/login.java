@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
+import project.MemberDAO;
+import project.MemberVO;
 
 /*
  * 회원가입버튼 : 로그인창
@@ -28,15 +30,15 @@ public class login extends JFrame {
 	// 버튼이 들어갈 메인 클래스
 	public login() {
 		        
-				setTitle("login");
-				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		    	
-		    	JPanel LoginContainer = new JPanel();
-		    	setContentPane(LoginContainer);
-		    	
-		    	setSize(800,800);
-		    	setResizable(false);
-		    	setVisible(true);
+//				setTitle("login");
+//				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		    	
+//		    	JPanel LoginContainer = new JPanel();
+//		    	setContentPane(LoginContainer);
+//		    	
+//		    	setSize(800,800);
+//		    	setResizable(false);
+//		    	setVisible(true);
 		    	
 		    
 		        JTextField t1;
@@ -45,8 +47,8 @@ public class login extends JFrame {
 		
 		    	
 		    		JFrame f = new JFrame(); // (1)
-		    		setTitle("login");
-					setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    		f.setTitle("login");
+					f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					
 		    		f.getContentPane().setBackground(new Color(204, 153, 153));
 		    		f.getContentPane().setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
@@ -356,7 +358,7 @@ class join extends JFrame {
 
 //		t1Chk = new JTextField();
 //		t1Chk.setBounds(248, 96, 149, 21);
-//		t1Chk.setText("*\uC544\uC774\uB514\uC911\uBCF5 \uC5EC\uBD80");
+//		t1Chk.setText("*아이디중복 여부 체크");
 //		panel.add(t1Chk);
 //		t1Chk.setColumns(10);
 
@@ -370,7 +372,7 @@ class join extends JFrame {
 				MemberDAO dao = new MemberDAO();
 
 				try {
-					if (member_pw != member_pwChk) {
+					if (member_pw.equals(member_pwChk)) {
 //								pwchkchk.setText("비밀번호입력이 같습니다");
 //								pwchkchk.setForeground(Color.red);
 						JOptionPane.showMessageDialog(null, "비밀번호입력이 같습니다");

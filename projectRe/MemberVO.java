@@ -1,6 +1,6 @@
 package projectRe;
 
-public class MemberVO {
+public class MemberVO extends MemberDAO{
 	
 	private String member_id;
 	private String member_pw;
