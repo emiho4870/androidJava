@@ -15,7 +15,6 @@ import javax.swing.border.LineBorder;
 
 import project.MemberDAO;
 import project.MemberVO;
-import projectRe.join;
 
 /*
  * 회원가입버튼 : 로그인창

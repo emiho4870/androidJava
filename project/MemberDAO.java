@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class MemberDAO{
+import javax.swing.JOptionPane;
+
+public class MemberDAO {
 
 	public void create(MemberVO vo) throws Exception {
 

@@ -13,8 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
-import project.MemberDAO;
-import project.MemberVO;
 
 /*
  * 회원가입버튼 : 로그인창
@@ -47,8 +45,8 @@ public class login extends JFrame {
 		
 		    	
 		    		JFrame f = new JFrame(); // (1)
-		    		f.setTitle("login");
-					f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    		setTitle("login");
+					setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					
 		    		f.getContentPane().setBackground(new Color(204, 153, 153));
 		    		f.getContentPane().setFont(new Font("Segoe UI Black", Font.PLAIN, 12));
@@ -169,17 +167,17 @@ public class login extends JFrame {
  */
 class join extends JFrame {
 	join() {
-		setTitle("join");
-
-		JPanel JoinContainer = new JPanel();
-		setContentPane(JoinContainer);
-
-		//JLabel NewLabel = new JLabel("새 창을 띄우는데 성공!");
-		//JoinContainer.add(NewLabel);
-
-		setSize(800, 800);
-		setResizable(false);
-		setVisible(true);
+//		setTitle("join");
+//
+//		JPanel JoinContainer = new JPanel();
+//		setContentPane(JoinContainer);
+//
+//		//JLabel NewLabel = new JLabel("새 창을 띄우는데 성공!");
+//		//JoinContainer.add(NewLabel);
+//
+//		setSize(800, 800);
+//		setResizable(false);
+//		setVisible(true);
 
 		JTextField textField;
 		JTextField textField_1;
@@ -358,7 +356,7 @@ class join extends JFrame {
 
 //		t1Chk = new JTextField();
 //		t1Chk.setBounds(248, 96, 149, 21);
-//		t1Chk.setText("*아이디중복 여부 체크");
+//		t1Chk.setText("*\uC544\uC774\uB514\uC911\uBCF5 \uC5EC\uBD80");
 //		panel.add(t1Chk);
 //		t1Chk.setColumns(10);
 
@@ -369,7 +367,7 @@ class join extends JFrame {
 				String member_pw = t2.getText();
 				String member_pwChk = t2Chk.getText();
 
-				MemberDAO dao = new MemberDAO();
+//				MemberDAO dao = new MemberDAO();
 
 				try {
 					if (member_pw.equals(member_pwChk)) {
