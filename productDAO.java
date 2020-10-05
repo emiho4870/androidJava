@@ -85,3 +85,12 @@ public class BbsDAO {
 제목 String
 작성자 String
 작성일 날짜 date
+
+
+
+공지사항데이터저장:페이지이동시내용표시
+하단페이징처리
+내용슬라이드
+
+
+검색기능연결
