@@ -11,12 +11,11 @@
       <div class="container">
 
         <div class="portfolio-details-container">
-        
+
           <div class="owl-carousel portfolio-details-carousel">
-          
-            <img src="assets/img/portfolio/grapes-690230_1280.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/spain-1832468_1280.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/olive-oil-1412361_1280.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
           </div>
 
           <div class="portfolio-info">

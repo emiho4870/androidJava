@@ -15,7 +15,7 @@ body {
 
 .column {
 	width: 1000px;
-	margin-left: 300px;
+	margin-left: 500px;
 }
 
 body>.grid {
@@ -29,14 +29,29 @@ body>.grid {
 .view_btn {
 	cursor: pointer;
 }
+
+.paging {
+	display: inline-block;
+	margin:0 auto;
+	margin-left : 200px;
+}
+.title {
+width : 500px;
+	}
+
+li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px;
+}
 </style>
 </head>
 <body>
-	
+
 	<jsp:include page="header.jsp"></jsp:include>
-	
-	
-	<table border="1">
+
+
+	<!-- <table border="1">
 			<tr id="firstRow" onclick="javascript:clickTrEvent(this)"
 				onmouseover="javascript:changeTrColor(this, '#FFFFFF', '#F4FFFD')"
 				style="cursor:hand">
@@ -55,11 +70,11 @@ body>.grid {
 				<td>third row - 1</td>
 				<td>third row - 2</td>
 			</tr>
-		</table>
-		
-		
-		
-		
+		</table> -->
+
+
+
+
 	<div class="ui middle aligned center aligned grid">
 		<div class="column">
 			<h2 class="ui teal image header">게시판 페이지</h2>
@@ -70,46 +85,85 @@ body>.grid {
 						<thead>
 							<tr>
 								<th>NO</th>
-								<th>카테고리</th>
-								<th>제목</th>
+								<th class = "title">제목</th>
+								<th>작성자</th>
 								<th>등록일</th>
 							</tr>
-							<tr class = "view_btn">
+							<tr class="view_btn">
 								<th>1</th>
-								<th>1</th>
-								<th>1</th>
-								<th>1</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
 							</tr>
-							<tr class = "view_btn">
+							<tr class="view_btn">
 								<th>2</th>
-								<th>2</th>
-								<th>2</th>
-								<th>2</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
 							</tr>
-							<tr class = "view_btn">
+							<tr class="view_btn">
 								<th>3</th>
-								<th>3</th>
-								<th>3</th>
-								<th>3</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
 							</tr>
-							<tr class = "view_btn">
+							<tr class="view_btn">
 								<th>4</th>
-								<th>4</th>
-								<th>4</th>
-								<th>4</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
+							</tr>
+							<tr class="view_btn">
+								<th>5</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
+							</tr>
+							<tr class="view_btn">
+								<th>6</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
+							</tr>
+							<tr class="view_btn">
+								<th>7</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
+							</tr>
+							<tr class="view_btn">
+								<th>8</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
+							</tr>
+							<tr class="view_btn">
+								<th>9</th>
+								<th class = "title">[마켓빨리]배송 매니저 1인 코로나19 확진 관련 안내</th>
+								<th>MarketBarly</th>
+								<th>2020-09-23</th>
 							</tr>
 						</thead>
-						
-						<tbody id="list">
-							<tr>
-								<th>4</th>
-								<th>4</th>
-								<th>4</th>
-								<th>4</th>
-							</tr>
-						</tbody>
-						
 					</table>
+
+
+				</div>
+
+
+
+				<!-- 페이징처리위치 -->
+				<div>
+					<ul class="paging">
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+						<li>7</li>
+						<li>8</li>
+						<li>9</li>
+					</ul>
 				</div>
 
 				<div class="ui error message"></div>
@@ -164,7 +218,6 @@ body>.grid {
 											alert("오류 발생" + error);
 										}
 									});
-
 							$(document)
 									.on(
 											"click",
@@ -173,7 +226,6 @@ body>.grid {
 												//해당하는 태그 속성중 DATA-ID를 가져와서 B_NO에 담음
 												var b_no = $(this).parent()
 														.attr("data-id");
-
 												$
 														.ajax({
 															type : "get",
@@ -207,7 +259,6 @@ body>.grid {
 															}
 														});
 											});
-
 							function FormatToUnixtime(unixtime) {
 								var u = new Date(unixtime);
 								return u.getUTCFullYear() + '-'
@@ -233,7 +284,6 @@ body>.grid {
 				trObj.style.backgroundColor = oldColor;
 			}
 		}
-
 		function clickTrEvent(trObj) {
 			alert(trObj.id);
 		}
