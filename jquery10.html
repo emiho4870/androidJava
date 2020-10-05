@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(function() {/* $() : document.ready  */
+		$('#btn1').click(function() { //click(function()
+			$.ajax({
+				url : "pay.jsp", // 표시할값
+				data : { 
+					id1 : $('#id1').val() //전달되는 값 // input
+				},
+				success : function(result) {
+						$('#id4').append(result)
+				}//success
+
+			})//ajax
+		})//b1 click
+		
+		$('#btn2').click(function() {
+			$.ajax({
+				url : "pay2.jsp",
+				data : { 
+					id1 : $('#id2').val()
+				},
+				success : function(result) {
+						$('#id4').append(result)
+				}//success
+
+			})//ajax
+		})//b1 click
+		
+		
+		
+		$('#btn3').click(function() {
+			$.ajax({
+				url : "pay3.jsp",
+				data : { 
+					id1 : $('#id3').val()
+				},
+				success : function(result) {
+						$('#id4').append(result) //결과값 표시
+				}//success
+
+			})//ajax
+		})//b1 click
+
+
+	})
+</script>
+</head>
+<body>
+	결제금액 :
+	<input type="text" id="id1"><br>
+	결제수단 :
+	<input type = "text" id="pay" placeholder ="1)계좌이체2)신용카드3)휴대폰">	<!-- <select>
+	<select>
+	<option value="계좌이체" id="opt">계좌이체</option>
+	<option value="신용카드" id="opt2">신용카드</option>
+	<option value="휴대폰" id="opt3">휴대폰</option>
+	</select><br> -->
+	<button id= "btn1">결제하기</button><br>
+	
+	회원가입할 아이디 입력 :
+	<input type="text" id="id2" >
+	<button id= "btn2">아이디중복체크</button><br>
+	
+	
+	인증받을 전화번호 입력 :
+	<input type="text" id="id3" >
+	<button id= "btn3">인증번호 받기</button><br>
+	
+	받은 인증번호
+	<div id = "id4"></div>
+	
+	
+	
+
+</body>
+</html>

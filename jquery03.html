@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type = "text/javascript">
+	$(function(){/* $() : document.ready  */
+		$('#b1').click(function(){
+			
+		})/* b1을 클릭했을때 ajax실행 : button하단  */
+		$.ajax({ /* 비동기통신 : */
+			url : "call.jsp", /* 실행시 연결할 페이지 : JSP */
+			/* date : , */ /* 아이디중복체크시 아이디 보낼때 데이터 */
+			data: { /* 전달할 데이터 */
+				name: '홍길동',
+				age : 100
+			},
+			success: function(result) { 
+				/*anonymous*//* 성공했을때 */
+				alert("성공")
+				console.log("받은 데이터:" + result);
+				if (result == '성인') {
+					location.href="http://www.naver.com";
+					/* alert('ok를 받음') */
+				} else {
+					alert('미성인이시군요! 부모의 동의가 필요합니다')
+					/* alert('ok를 받지않음') */
+					location.href="http://www.naver.com";
+
+				}
+				
+			}
+		})
+	})
+</script>
+
+</head>
+<body>
+ <button id = "b1">내 tomcat서버로 통신해보자</button>
+ <!-- <button> : openTag : </button> : closeTag  -->
+</body>
+</html>
