@@ -77,3 +77,11 @@ public class BbsDAO {
    }
 
 }
+
+
+
+
+번호 autoincrement
+제목 String
+작성자 String
+작성일 날짜 date
