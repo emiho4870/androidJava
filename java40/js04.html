@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+body{
+text-align: center;
+}
+input{
+display: inline-block;
+}
+
+button {
+color : white;
+
+	border-style: none;
+	background-color:green;
+	font-size: 5px;
+	width: 130px
+}
+
+</style>
+<script type="text/javascript">
+function sum(x,y) {
+	var input = parseInt(document.getElementById("a").value);
+	var input2 = parseInt(document.getElementById("b").value);
+
+	document.getElementById("c").value = input + input2;
+
+	
+}
+function same() {
+	var input = document.getElementById("a").value;
+	var input2 = document.getElementById("b").value;
+	
+	if(input == input2){
+		document.getElementById("c").value = "값이 동일합니다.";
+	}else{
+		document.getElementById("c").value = "값이 다릅니다.";
+	}
+}
+function check() {
+	var input = document.getElementById("a").value;
+	var input2 = document.getElementById("b").value;
+	
+	if(input == '' || input2 == ''){
+		document.getElementById("c").value = "값을 입력하지 않았습니다.";
+	}else{
+		document.getElementById("c").value = "값을 입력하였습니다.";
+	}
+}
+</script>
+</head>
+<body>
+<input id="a" type="text" placeholder="첫 번째 값입력" style="border-style: none; "><br>
+<input id="b" type="text" placeholder="두 번째 값입력" style="border-style: none;"><br><br>
+<input id="c" type="text" placeholder="결과값" style="border-style: none;"><br><br>
+<button onclick="sum(a,b)">로그인</button><br>
+<button onclick="check()">입력값 넣었는지 체크</button><br>
+<button onclick="same()">입력값 동일한지 체크</button>
+
+</body>
+</html>

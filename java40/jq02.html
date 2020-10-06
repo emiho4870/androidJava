@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('#b1').click(function() {
+		location.href="jq02.jsp?id="+$('#id').val()+"&pw="+$('#pw').val()
+	})
+})
+</script>
+</head>
+<body>
+	<input type="text" id="id" placeholder="아이디">
+	<input type="text" id="pw" placeholder="패스워드">
+	<button id="b1">로그인</button>
+</body>
+</html>
