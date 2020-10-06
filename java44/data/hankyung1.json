@@ -1,0 +1,133 @@
+{
+    "status": "ok",
+    "feed": {
+        "url": "http://rss.hankyung.com/new/news_stock.xml",
+        "title": "한국경제 | 뉴스 | 증권",
+        "link": "http://www.hankyung.com/news/stock/",
+        "author": "",
+        "description": "한경닷컴 RSS 서비스",
+        "image": "http://img.hankyung.com/img/bi_top_news02.gif"
+    },
+    "items": [
+        {
+            "title": "개미 대신 LG화학 꿰찬 외국인…주가 70만원대 회복시킬까",
+            "pubDate": "2020-10-06 02:20:36",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100687006&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "257bb7ab8eab9750718e3962a02dbb18",
+            "author": "",
+            "thumbnail": "",
+            "description": "LG화학이 배터리 부문 분사를 발표한 후 개인들의 매도가 이어졌지만, 외국인은 이를 고스란히 매수한 것으로 나타났다. 배터리 부문 분사 발표 전",
+            "content": "LG화학이 배터리 부문 분사를 발표한 후 개인들의 매도가 이어졌지만, 외국인은 이를 고스란히 매수한 것으로 나타났다. 배터리 부문 분사 발표 전",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "코스피, 트럼프 조기 퇴원 소식에 '상승'…개인·외국인 '사자'",
+            "pubDate": "2020-10-06 00:30:15",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100680476&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "a9078c1f8576c3b8e323c1a82e480158",
+            "author": "",
+            "thumbnail": "",
+            "description": "코스피지수는 신종 코로나바이러스 감염증(코로나19)로 치료 중인 도널드 트럼프 대통령의 조기 퇴원 소식에 상승하고 있다. 6일 오전 9시20분",
+            "content": "코스피지수는 신종 코로나바이러스 감염증(코로나19)로 치료 중인 도널드 트럼프 대통령의 조기 퇴원 소식에 상승하고 있다. 6일 오전 9시20분",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "삼성전자 '6만원' 넘나…외국인 '사자'에 강세",
+            "pubDate": "2020-10-06 00:23:47",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100680116&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "a547cb1613e14796db1a4082088f5665",
+            "author": "",
+            "thumbnail": "",
+            "description": "삼성전자가 상승세를 타고 있다. 외국인 매수세가 이어지면서 6만원 돌파가 기대된다.6일 오전 9시20분 현재 삼성전자는 전거래일보다 900원(1",
+            "content": "삼성전자가 상승세를 타고 있다. 외국인 매수세가 이어지면서 6만원 돌파가 기대된다.6일 오전 9시20분 현재 삼성전자는 전거래일보다 900원(1",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "정유주, 강세…국제유가 상승 영향",
+            "pubDate": "2020-10-06 00:19:23",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100674676&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "55551a05767d6471b1d4314c325c7fbe",
+            "author": "",
+            "thumbnail": "",
+            "description": "정유주가 상승하고 있다. 국제 유가가 상승해서다.6일 오전 9시11분 현재 SK이노베이션은 전날보다 5500원(3.9%0 상승한 14만6500원",
+            "content": "정유주가 상승하고 있다. 국제 유가가 상승해서다.6일 오전 9시11분 현재 SK이노베이션은 전날보다 5500원(3.9%0 상승한 14만6500원",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "'코로나 확진' 트럼프 조기 퇴원에 레네제론 7.13% '급등'",
+            "pubDate": "2020-10-05 22:20:55",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100674876&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "b997efd3a7f7620b61a99a1e82a3b24f",
+            "author": "",
+            "thumbnail": "",
+            "description": "간밤 뉴욕증시는 도널드 트럼프 대통령의 조기 퇴원 소식과 신규 부양책 합의에 대한 기대로 강세를 기록했다. 5일(현지시간) 뉴욕증권거래소(NYS",
+            "content": "간밤 뉴욕증시는 도널드 트럼프 대통령의 조기 퇴원 소식과 신규 부양책 합의에 대한 기대로 강세를 기록했다. 5일(현지시간) 뉴욕증권거래소(NYS",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "코스피, 외국인·기관 순매수에 1% '강세'…코스닥은 850선 회복",
+            "pubDate": "2020-10-05 06:43:58",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100558306&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "e60ff893b0193731956fa68401256d8a",
+            "author": "",
+            "thumbnail": "",
+            "description": "추석 연휴를 쉬고 돌아온 코스피지수가 상승 마감했다. 4거래일 연속 상승해 2350선을 회복했다. 외국인과 기관이 동반 매수세를 기록한 가운데",
+            "content": "추석 연휴를 쉬고 돌아온 코스피지수가 상승 마감했다. 4거래일 연속 상승해 2350선을 회복했다. 외국인과 기관이 동반 매수세를 기록한 가운데",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "(마감)프로그램 1054억 매수 우위",
+            "pubDate": "2020-10-05 06:35:30",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100558376&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "e2c3ff686e70f4603f1d58d03e6b1352",
+            "author": "",
+            "thumbnail": "",
+            "description": "한경닷컴",
+            "content": "한경닷컴",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "(마감)코스피 기관 3875억 매수 우위",
+            "pubDate": "2020-10-05 06:35:05",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100558316&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "8aed0e33c2e6ce9021784971fedb2599",
+            "author": "",
+            "thumbnail": "",
+            "description": "한경닷컴",
+            "content": "한경닷컴",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "(마감)코스피 외국인 1696억 순매수",
+            "pubDate": "2020-10-05 06:34:44",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100558296&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "912a7e6852c3bcbefa75b89de9dd4ae9",
+            "author": "",
+            "thumbnail": "",
+            "description": "한경닷컴",
+            "content": "한경닷컴",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "러셀로보틱스, 20억원 규모 상환전환우선주 투자유치",
+            "pubDate": "2020-10-05 04:50:48",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100551736&amp;amp;sid=newsStock&amp;amp;nid=000&amp;rss=r",
+            "guid": "9a0eedfc8749d3ec4155e777e2c5cafe",
+            "author": "",
+            "thumbnail": "",
+            "description": "국내 자동화 설비 전문기업인 러셀의 자회사인 러셀로보틱스가 총 20억원 규모의 상환전환우선주(RCPS) 투자를 유치했다고 5일 밝혔다. 러셀로보",
+            "content": "국내 자동화 설비 전문기업인 러셀의 자회사인 러셀로보틱스가 총 20억원 규모의 상환전환우선주(RCPS) 투자를 유치했다고 5일 밝혔다. 러셀로보",
+            "enclosure": {},
+            "categories": []
+        }
+    ]
+}

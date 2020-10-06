@@ -1,0 +1,133 @@
+{
+    "status": "ok",
+    "feed": {
+        "url": "http://rss.hankyung.com/new/news_enter.xml",
+        "title": "한국경제 | 뉴스 | 스포츠/문화",
+        "link": "http://www.hankyung.com/news/sports/",
+        "author": "",
+        "description": "한경닷컴 RSS 서비스",
+        "image": "http://img.hankyung.com/img/bi_top_news02.gif"
+    },
+    "items": [
+        {
+            "title": "갱신 없는 '의사면허'…100살 의사에게 진료받아도 될까요?",
+            "pubDate": "2020-10-06 01:32:07",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100682287&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "3407b9a2e29756131edbee08a1a7e6be",
+            "author": "",
+            "thumbnail": "",
+            "description": "3·1운동이 있었던 1919년 태어난 의사가 국내에 3명 존재하는 것을 포함해 80세 의상 현업 의사가 820명에 달하는 것으로 나타났다. 다만",
+            "content": "3·1운동이 있었던 1919년 태어난 의사가 국내에 3명 존재하는 것을 포함해 80세 의상 현업 의사가 820명에 달하는 것으로 나타났다. 다만",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "야쿠르트, 하루야채 잇는 식물성 단백질 '하루식단' 선보여",
+            "pubDate": "2020-10-06 01:05:47",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=202010068021g&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "04e002ffc0644d9b590e27cf478fd0f7",
+            "author": "",
+            "thumbnail": "",
+            "description": "한국야쿠르트는 비건 음료인 ‘하루식단 그레인(이하 하루식단)’을 출시했다고 6일 밝혔다.동물 유래 원재료를 사용하지 않아 동물성 식품을 전혀 먹",
+            "content": "한국야쿠르트는 비건 음료인 ‘하루식단 그레인(이하 하루식단)’을 출시했다고 6일 밝혔다.동물 유래 원재료를 사용하지 않아 동물성 식품을 전혀 먹",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "귀경길 고속도로, 부산→서울 4시간 50분…일부 구간 정체",
+            "pubDate": "2020-10-04 04:58:56",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100418177&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "0b50311b89356eb1c5afbbe2a7287a6c",
+            "author": "",
+            "thumbnail": "",
+            "description": "추석 연휴 마지막 날인 4일 오후 고속도로는 대체로 원활한 흐름을 보이고 있지만 일부 구간에서 다소 정체를 빚고 있다.한국도로공사에 따르면 이날",
+            "content": "추석 연휴 마지막 날인 4일 오후 고속도로는 대체로 원활한 흐름을 보이고 있지만 일부 구간에서 다소 정체를 빚고 있다.한국도로공사에 따르면 이날",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "7000억 쏟아부은 경남 로봇랜드…1년 만에 버려졌다",
+            "pubDate": "2020-10-03 23:00:06",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100283177&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "e297449fe3684b4c5c9b00b7da01c07b",
+            "author": "",
+            "thumbnail": "",
+            "description": "'지능형 로봇 개발·보급 촉진법'에 따라 개발된 경남 로봇랜드에는 사업비 7000억원을 쏟아부었다. 국비 560억원, 지방비 2100억원이 들어",
+            "content": "'지능형 로봇 개발·보급 촉진법'에 따라 개발된 경남 로봇랜드에는 사업비 7000억원을 쏟아부었다. 국비 560억원, 지방비 2100억원이 들어",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "오늘 귀경길 고속도로 \"평소 주말 수준\"…부산→서울 6시간",
+            "pubDate": "2020-10-03 00:22:13",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100398327&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "25a0905b0a397d1fb8ff50a36aed9555",
+            "author": "",
+            "thumbnail": "",
+            "description": "3일간의 추석 연휴와 이어지는 주말이자 개천절인 3일 오전 전국 고속도로는 비교적 원활한 흐름을 보이고 있다. 평소 주말 수준의 교통량으로 큰",
+            "content": "3일간의 추석 연휴와 이어지는 주말이자 개천절인 3일 오전 전국 고속도로는 비교적 원활한 흐름을 보이고 있다. 평소 주말 수준의 교통량으로 큰",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "[속보] '상온노출' 의심 독감백신에 4명 이상반응…누적 12명",
+            "pubDate": "2020-10-02 10:11:00",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100292977&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "a4ad56410ec5d6427134a5ce1e9dab20",
+            "author": "",
+            "thumbnail": "",
+            "description": "한경닷컴 뉴스룸 open@hankyung.com",
+            "content": "한경닷컴 뉴스룸 open@hankyung.com",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "[속보] '상온 노출' 의심 독감백신 접종자 2290명…380명 증가",
+            "pubDate": "2020-10-02 10:08:31",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100292947&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "9063a93169ca4170ec5fed8a11e7b95d",
+            "author": "",
+            "thumbnail": "",
+            "description": "한경닷컴 뉴스룸 open@hankyung.com",
+            "content": "한경닷컴 뉴스룸 open@hankyung.com",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "[속보] 서울·경기, 코로나19 사망자 4명 추가…누적 420명",
+            "pubDate": "2020-10-02 09:46:10",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100292697&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "79441826ab56861d7bbd60d3380cc4e7",
+            "author": "",
+            "thumbnail": "",
+            "description": "서울·경기 지역에서 신종 코로나바이러스 감염증(코로나19) 사망자가 4명 늘었다.중앙방역대책본부(방대본)는 2일 오후 6시 기준으로 코로나19",
+            "content": "서울·경기 지역에서 신종 코로나바이러스 감염증(코로나19) 사망자가 4명 늘었다.중앙방역대책본부(방대본)는 2일 오후 6시 기준으로 코로나19",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "추석 당일 고속도로 양방향 정체…한밤중 해소",
+            "pubDate": "2020-10-01 08:24:53",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100179147&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "3b9c8c221c4fd2c7524f88c94be2db74",
+            "author": "",
+            "thumbnail": "",
+            "description": "추석 당일인 1일 오후에 귀성·귀경 차량으로 인해 고속도로 곳곳에서 양방향 정체가 이어지고 있다.한국도로공사에 따르면 이날 오후 5시 기준 경부",
+            "content": "추석 당일인 1일 오후에 귀성·귀경 차량으로 인해 고속도로 곳곳에서 양방향 정체가 이어지고 있다.한국도로공사에 따르면 이날 오후 5시 기준 경부",
+            "enclosure": {},
+            "categories": []
+        },
+        {
+            "title": "제주에 9만명 몰렸다…\"바닷가도 카페도 북적\" 초비상",
+            "pubDate": "2020-10-01 07:41:55",
+            "link": "http://www.hankyung.com/news/app/newsview.php?aid=2020100178147&amp;amp;sid=newsEnter&amp;amp;nid=000&amp;rss=r",
+            "guid": "8a4518bbb236b742fcaed3cae59d8888",
+            "author": "",
+            "thumbnail": "",
+            "description": "추석 연휴 첫날인 지난달 30일 하루동안만 4만명이 넘는 관광객이 제주에 몰렸고, 추석 당일인 1일에도 4만여명의 관광객이 제주를 찾을 것으로",
+            "content": "추석 연휴 첫날인 지난달 30일 하루동안만 4만명이 넘는 관광객이 제주에 몰렸고, 추석 당일인 1일에도 4만여명의 관광객이 제주를 찾을 것으로",
+            "enclosure": {},
+            "categories": []
+        }
+    ]
+}
