@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">
+	function food(time){ /* 버튼실행 함수설정 : 콜백함수 : 하단에서 설정한것 실행 */
+		console.log(time +' 시에 아침을 먹었어요 확인함') /* 브라우저에 내장된 객체 : console.log */
+		/* food(매개변수 파라미터 처리하는데 있어서 입력값의 역할) */
+		if (time >= 8){
+			console.log("지각")
+		}else{
+			console.log("지각아니")
+			
+		}
+		/* return "ok"; */
+	}
+	
+	/* java : void : return값*/
+	/* javascript : return "ok"; */
+</script>
+
+</head>
+<body>
+ <button onclick = "food(8)">기능 처리가 함수 중심으로</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+	$(function() {/* $() : document.ready  */
+	$('#b1').click(function() {
+			/* b1을 클릭했을때 ajax실행 : button하단  */
+			$.ajax({ /* 비동기통신 : */
+				url : "call2.jsp", /* 실행시 연결할 페이지 : JSP */
+				/* date : , *//* 아이디중복체크시 아이디 보낼때 데이터 */
+				data : { /* 전달할 데이터 */
+					score : $('#score').val()
+				/* input값 넘김 */
+				},
+				success : function(result) {
+					/*anonymous*//* 성공했을때 */
+					alert("성공")
+					console.log("받은 데이터:" + result);
+					if (result == '최우수' || result == '우수') {
+						alert("통과")
+					} else {
+						alert("재시험")
+					}
+				}
+			})
+		})
+	})
+</script>
+</head>
+<body>
+	성적
+	<input type="text" id="score">
+	<button id="b1">성적을 판별해보자</button>
+	<!-- <button> : openTag : </button> : closeTag  -->
+</body>
+</html>
